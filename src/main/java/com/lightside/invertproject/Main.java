@@ -13,10 +13,6 @@ public final class Main {
     private static final Integer[] ARR = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     private static final Character[] ARRCHAR = {'a', 'b', 'c', 'd', 'e'};
 
-    private Main() {
-
-    }
-
     /**
      * com.lightside.invertproject.inverter.Main method
      * @param args string args

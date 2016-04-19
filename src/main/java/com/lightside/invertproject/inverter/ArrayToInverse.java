@@ -2,14 +2,23 @@ package com.lightside.invertproject.inverter;
 
 /**
  * Entity class - array to inverse.
+ * @param <T> any type
  */
-public class ArrayToInverse<T>  {
+public class ArrayToInverse<T> {
     private T[] arr;
 
     /**
-     * Constructor
+     * Default constructor
      */
     public ArrayToInverse() {
+    }
+
+    /**
+     * Constructor with args
+     * @param array array to inverse
+     */
+    public ArrayToInverse(final T[] array) {
+        this.arr = array;
     }
 
     /**

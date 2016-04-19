@@ -3,41 +3,18 @@ package com.lightside.invertproject.inverter;
 /**
  * Reversing integer arrays.
  */
-public class InvertArray implements IInvertInterface {
+public class InvertArray implements IInvertArray {
     /**
      * Inverse array of any type.
-     * @param array array for inversing
-     * @param <T> return T arg
+     * @param array array to inverse.
      */
-    public <T> void inverse(final ArrayToInverse<T> array) {
-        try {
-            T[] tmpArr = array.getArr();
-            int end = tmpArr.length - 1;
+    public void inverse(final Object[] array) {
+        int end = array.length - 1;
 
-            for (int i = 0; i < end / 2; i++) {
-                T tmp = tmpArr[i];
-                tmpArr[i] = tmpArr[end - i];
-                tmpArr[end - i] = tmp;
-            }
-            array.setArr(tmpArr);
-        } catch (Exception e) {
-//            throw ArrayToInverse;
+        for (int i = 0; i < end / 2; i++) {
+            Object tmp = array[i];
+            array[i] = array[end - i];
+            array[end - i] = tmp;
         }
-    }
-
-    /**
-     * Method from interface
-     * @return null
-     */
-    public Integer getValue() {
-        return null;
-    }
-
-    /**
-     * Method from interface
-     * @param value value to set
-     */
-    public void setValue(final Integer value) {
-
     }
 }

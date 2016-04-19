@@ -22,19 +22,21 @@ public final class Main {
      * @param args string args
      */
     public static void main(final String[] args) {
-        ArrayToInverse arrayToInverse = new ArrayToInverse();
-        arrayToInverse.setArr(ARR);
+        try {
+            ArrayToInverse arrayToInverse = new ArrayToInverse(ARR);
+            InvertArray invert = new InvertArray();
 
-        InvertArray invert = new InvertArray();
+            System.out.println(Arrays.toString(ARR));
+            invert.inverse(arrayToInverse.getArr());
+            System.out.println(Arrays.toString(ARR));
 
-        System.out.println(Arrays.toString(ARR));
-        invert.inverse(arrayToInverse);
-        System.out.println(Arrays.toString(ARR));
-
-        System.out.println(Arrays.toString(ARRCHAR));
-        arrayToInverse.setArr(ARRCHAR);
-        invert.inverse(arrayToInverse);
-        System.out.println(Arrays.toString(ARRCHAR));
+            System.out.println(Arrays.toString(ARRCHAR));
+            arrayToInverse.setArr(ARRCHAR);
+            invert.inverse(arrayToInverse.getArr());
+            System.out.println(Arrays.toString(ARRCHAR));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

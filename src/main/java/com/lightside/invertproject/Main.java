@@ -19,7 +19,7 @@ public final class Main {
      */
     public static void main(final String[] args) {
         try {
-            ArrayToInverse arrayToInverse = new ArrayToInverse(ARR);
+            ArrayToInverse arrayToInverse = new ArrayToInverse<Integer>(ARR);
             InvertArray invert = new InvertArray();
 
             System.out.println(Arrays.toString(ARR));

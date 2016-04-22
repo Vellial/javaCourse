@@ -19,16 +19,16 @@ public final class Main {
      */
     public static void main(final String[] args) {
         try {
-            ArrayToInverse arrayToInverse = new ArrayToInverse<Integer>(ARR);
+            ArrayToInverse<Integer> arrayToInverseInt = new ArrayToInverse<Integer>(ARR);
+            ArrayToInverse<Character> arrayToInverseChar = new ArrayToInverse<Character>(ARRCHAR);
             InvertArray invert = new InvertArray();
 
             System.out.println(Arrays.toString(ARR));
-            invert.inverse(arrayToInverse.getArr());
+            invert.inverse(arrayToInverseInt.getArr());
             System.out.println(Arrays.toString(ARR));
 
             System.out.println(Arrays.toString(ARRCHAR));
-            arrayToInverse.setArr(ARRCHAR);
-            invert.inverse(arrayToInverse.getArr());
+            invert.inverse(arrayToInverseChar.getArr());
             System.out.println(Arrays.toString(ARRCHAR));
         } catch (Exception e) {
             e.printStackTrace();

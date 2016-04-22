@@ -44,7 +44,7 @@ public class InvertArrayTest {
     @Test
     public void arrayToInverseSetTest() {
         Integer[] intArr = {1, 2, 3, 4, 5, 6};
-        ArrayToInverse arrayToInverse = new ArrayToInverse<Integer>();
+        ArrayToInverse<Integer> arrayToInverse = new ArrayToInverse<Integer>();
         arrayToInverse.setArr(intArr);
         assertArrayEquals(arrayToInverse.getArr(), intArr);
     }
